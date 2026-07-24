@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACE SBM</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <script type="module" src="scripts.js"></script>
+</head>
+<!-- --------------------------------navbar login-------------------------------- -->
+<body>  
+    <div class="login-modal" id="loginModal">
+        <div class="login-box">
+            <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+
+            <img src="../images/logo.png" class="login-logo" alt="ACES Logo">
+            <h2>Login to ACES SBM</h2>
+            <form id="loginForm">
+            <input 
+            type="email" 
+            id="email" 
+            placeholder="Enter your email" 
+            required>
+
+            <input 
+            type="password"
+            id="password" 
+            placeholder="Enter your password" 
+            required>
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+            <p id="loginMessage"></p>
+        </form>
+        </div>
+    </div>
+<!-- -------------------------------navbar -------------------------------- -->  
+    <nav class="navbar">
+    <div class="nav-logo">
+        <img src="../images/logo.png" class="logo" alt="ACES Logo">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="Home.html" >Home</a></li>
+        <li><a href="Aboutus.html" class="here">About us</a></li>
+        <li class="staff-only"><a href="SchoolPerformance.html">School Performance</a></li>
+        <li class="staff-only"><a href="ProgramsAndProjects.html">Programs and Projects</a></li>
+        <li><a href="Transparency.html">Transparency</a></li>
+
+        <li class="Issuances-dropdown admin-only">
+            <a href="#">Issuances</a>
+            <ul class="Issuances-dropdownmenu">
+                <li><a href="#">2027</a></li>
+                <li><a href="#">2026</a></li>
+                <li><a href="#">2025</a></li>
+                <li><a href="#">2024</a></li>
+                <li><a href="#">2023</a></li>
+                <li><a href="#">2022</a></li>
+                <li><a href="#">2021</a></li>
+            </ul>
+        </li>
+
+        <li class="staff-only"><a href="SchoolProfile.html">School Profile</a></li>
+        <li><a href="NewsletterAndReports.html">Newsletter and Reports</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+    </ul>
+
+    <div class="nav-login">
+        <button id="authButton" class="login-btn">Login</button>
+    </div>
+</nav>
+
+    <!-- --------------------------------main content-------------------------------- -->
+    <main class="about-container">
+        <h2>About Us</h2>
+        <section class="about-card history-section">
+            <h3>History</h3>
+            <p>Alangilan Central Elementary School, located in Barangay Alangilan, Batangas City, was established in 1916 with the mission of providing accessible and quality education to the children of the community. For more than a century, the school has played a significant role in shaping the minds, character, and future of countless learners, becoming one of the most respected educational institutions in the area. Through the years, it has continuously adapted to the changing needs of education while remaining committed to its responsibility of developing well-rounded and productive citizens.</p>
+            <p>As one of the six public elementary schools under Batangas City District III, Alangilan Central Elementary School has remained steadfast in its pursuit of academic excellence and community service. The school is currently home to forty-three qualified and competent teachers who dedicate their knowledge, skills, and passion to the success of every learner. Guided by their commitment to excellence and service, these educators continue to inspire students and contribute to the growth and progress of Barangay Alangilan and its neighboring communities. Today, Alangilan Central Elementary School proudly carries forward its rich legacy while preparing future generations to meet the challenges and opportunities of an ever-changing world.</p>
+        </section>
+        <section class="about-card vision-mission-section">
+            <h3>Mission and Vision</h3>
+            <h4>Mission</h4>
+            <ul>
+                <li>To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:</li>
+                <li>Students learn in a child-friendly, gender-sensitive, safe, and motivating environment.</li>
+                <li>Teachers facilitate learning and constantly nurture every learner.</li>
+                <li>Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.</li>
+                <li>Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.</li>
+            </ul>
+            <h4>Vision</h4>
+                <p>We dream of Filipinos who passionately love their country and whose values and competencies enable them to realize their full potential and contribute meaningfully to building the nation.</p>
+                <p>As a learner-centered public institution, the Department of Education continuously improves itself to better serve its stakeholders.</p>
+            <h4>Core Values</h4>
+            <ul>
+                <li>Makadiyos (God-loving)</li>
+                <li>Makatao (Humane)</li>
+                <li>Makakalikasan (Nature-loving)</li>
+                <li>Makabansa (Patriotic)</li>
+            </ul>
+        </section>
+        <section class="about-card objectives-section">            
+            <h3>Objectives and Goals</h3>
+            <ul>
+                <li>To provide quality education that is accessible to all learners.</li>
+                <li>To develop the intellectual, social, emotional, and physical potential of every learner.</li>
+                <li>To promote a culture of lifelong learning and continuous improvement among students, teachers, and staff.</li>
+                <li>To foster a sense of community and social responsibility among learners.</li>
+                <li>To prepare students to become responsible citizens who contribute positively to society.</li>
+            </ul>
+        </section>
+        <section class="about-card principal-section">
+            <h3>Principal</h3>
+            <div class="principal-wrapper">
+                <div class="principal-picture">
+                    <img src="../images/principal.png" alt="Dr. Fe R. Astillero">
+                </div>
+
+            <div class="principal-info">
+                <p>Dr. Fe R. Astillero</p>
+                <p>Principal IV</p>
+                <p>Alangilan Central Elementary School</p>
+            </div>       
+        </section>
+        <section class="about-card principal-message-section">             
+            <h3>Message of the Principal</h3>
+            <p>Welcome to Alangilan Central Elementary School, a place where excellence in education, character formation, and community partnership come together to shape the leaders of tomorrow. For more than a century, our school has remained committed to providing quality and inclusive education that empowers every learner to reach their fullest potential.</p>
+            <p>As we continue to embrace innovation and the changing landscape of education, we remain steadfast in our mission to create a safe, nurturing, and learner-centered environment where every child can grow academically, socially, and morally. Through the dedication of our teachers, staff, parents, and stakeholders, we strive to uphold the values of integrity, excellence, and service that define our institution.</p>
+            <p>We invite you to explore our website and learn more about the programs, achievements, and opportunities that make Alangilan Central Elementary School a proud center of learning in our community. Together, let us continue building a brighter future for our learners and for generations to come.</p>
+            <p>— Office of the Principal</p>
+            <p>Alangilan Central Elementary School</p>
+        </section>
+        <section class="about-card location-section">
+        <h3>Location</h3>
+        </section>
+    </main>
+    
+
+<!-- --------------------------------footer-------------------------------- -->
+    <div class="deped">
+        <a href="https://depedcalabarzon.ph/"><img src="../images/deped.png"></a>
+        <div class="deped-content">
+            <h3>Department of Education CALABARZON</h3>
+            <p>The Department of Education CALABARZON is committed to providing quality
+                , accessible, and inclusive education for all learners in the region. 
+                It strives to develop competent, responsible, and globally competitive 
+                individuals through excellence in education.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.facebook.com/DepEdACES109582" class="fa-brands fa-facebook-f"></a>
+            <a href="#" class="fa-solid fa-at"></a>
+            <a href="#" class="fa-solid fa-phone"></a>
+        </div>
+        <div class="footerbottom">
+            <p>&copy; <span id="current-year"></span> ACES. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
