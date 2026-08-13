@@ -6,8 +6,9 @@
     <title>ACE SBM</title>
     <link rel="stylesheet" href="/web/home_aboutus_schedule.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
-    <script type="module" src="/web/scripts.js"></script>
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <script type="module" src="/web/scripts.js"></script> 
+    <script type="module" src="/web/schedule.js"></script>
 </head>
 <!-- --------------------------------navbar login-------------------------------- -->
 <body>  
@@ -36,15 +37,14 @@
         </form>
         </div>
     </div>
-
-<!-- --------------------------------navbar -------------------------------- -->
+<!-- --------------------------------navbar-------------------------------- -->
     <nav class="navbar">
     <div class="nav-logo">
         <img src="/images/logo.png" class="logo" alt="ACES Logo">
     </div>
 
     <ul class="nav-links">
-        <li><a href="/web/Home.html" class="here">Home</a></li>
+        <li><a href="/web/Home.html">Home</a></li>
         <li><a href="/web/Aboutus.html">About us</a></li>
         <li class="staff-only"><a href="/web/SchoolPerformance.html">School Performance</a></li>
         <li class="staff-only"><a href="/web/ProgramsAndProjects.html">Programs and Projects</a></li>
@@ -65,66 +65,49 @@
 
         <li class="staff-only"><a href="/web/SchoolProfile.html">School Profile</a></li>
         <li><a href="/web/NewsletterAndReports.html">Newsletter and Reports</a></li>
-        <li><a href="/web/Schedule.html">Schedule</a></li>
+        <li><a href="/web/Schedule.html" class="here">Schedule</a></li>
     </ul>
 
     <div class="nav-login">
         <button id="authButton" class="login-btn">Login</button>
     </div>
 </nav>
-
 <!-- --------------------------------main content-------------------------------- -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2 >ACES DATA - BASED MANAGEMENT SYSTEM</h2>
-            <hr>
-            <h2>School ID: 109582</h2>
-            <a href="/web/Aboutus.html" class="learn-more-btn">Learn More</a>
+ <main>
+ <section class="schedule-section">
+    <div class="schedule-page">
+        <div class="schedule-header">
+            <h1>Schedule</h1>
+            <p>Calendar of Activities</p>
         </div>
-    </section>
+        <button id="scheduleUploadBtn" class="change-btn admin-only">
+            <i class="fa-solid fa-upload"></i>
+            Change Schedule
+        </button>
+    </div>
+    <div class="schedule-container">
+        <img
+            id="scheduleImage"
+            src=""
+            alt="School Schedule">
+    </div>
+</section>
 
-    <section class="news-section">
-        <div class="container">
-            <div class="news-grid">
-                <div class="carousel-block">
-                    <h2 class="section-title">Featured Highlights</h2>
-                    <div class="carousel-placeholder">
-                        <p>Carousel Go Here</p>
-                    </div>
-                </div>
-                
-                <div class="latest-news-block">
-                    <h2 class="section-title">Latest Updates</h2>
-                    <ul class="news-list">
-                        <li>
-                            <a href="#">
-                                <span class="news-date">June 15, 2026</span>
-                                <h3>Enrollment Schedule for SY 2026-2027</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="news-date">June 10, 2026</span>
-                                <h3>Upcoming General PTA Meeting</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="news-date">June 02, 2026</span>
-                                <h3>ACES Faithbook Project Launch</h3>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="about-card location-section">
-        <h3>Location</h3>
-        <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d968.7151819094607!2d121.0693016!3d13.7872681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd0fe5e975b5a3%3A0x474b2811fe24735f!2sQ3Q9%2B2M3%2C%20President%20Jose%20P.%20Laurel%20Hwy%2C%20Batangas%20City%2C%204200%20Batangas!5e0!3m2!1sen!2sph!4v1786073719707!5m2!1sen!2sph"></iframe>
-    </section>
-   <!-- --------------------------------footer-------------------------------- -->
+<div id="scheduleUploadModal" class="uploadsch-modal">
+    <div class="upload-box">
+        <span class="close-upload">&times;</span>
+        <h2>Upload Schedule</h2>
+        <input
+            type="file"
+            id="scheduleFile"
+            accept=".png,.jpg,.jpeg">
+        <button id="uploadScheduleButton">
+            Upload
+        </button>
+    </div>
+</div>
+</main>
+<!-- --------------------------------footer-------------------------------- -->
     <div class="deped">
         <a href="https://depedcalabarzon.ph/"><img src="/images/deped.png"></a>
         <div class="deped-content">
