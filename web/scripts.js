@@ -1,6 +1,6 @@
 import{ createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://hyljgkbyaekgfwrovjnj.supabase.co';
+const supabaseUrl = 'https://hyljgkbyaekgfwrovjnj.supabase.co'
 const supabaseKey = 'sb_publishable_OxfQbHyrkLVXrisOS5kUhw_1LhfM_dD'
 
 const supabase = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: true, autoRefreshToken: true } });
