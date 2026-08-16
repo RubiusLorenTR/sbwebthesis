@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACE SBM</title>
-    <link rel="stylesheet" href="/web/table.css">
+    <link rel="stylesheet" href="/web/school_p.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
-    <script type="module" src="/web/scripts.js"></script>
-    <script type="module" src="/web/table.js"></script>
+    <script type="module" src="scripts.js"></script>
 </head>
 <!-- --------------------------------navbar login-------------------------------- -->
 <body>  
@@ -44,7 +43,7 @@
     </div>
 
     <ul class="nav-links">
-        <li><a href="/web/home.html" >Home</a></li>
+        <li><a href="/web/home.html">Home</a></li>
         <li><a href="/web/aboutus.html">About us</a></li>
         <li class="staff-only"><a href="/web/schoolperformance.html">School Performance</a></li>
         <li class="staff-only"><a href="/web/pap.html">Programs and Projects</a></li>
@@ -63,8 +62,8 @@
             </ul>
         </li>
 
-        <li class="staff-only"><a href="/web/schoolprofile.html">School Profile</a></li>
-        <li><a href="/web/newsletterandreports.html" class="here">Newsletter and Reports</a></li>
+        <li class="staff-only"><a href="/web/schoolprofile.html" class="here">School Profile</a></li>
+        <li><a href="/web/newsletterandreports.html">Newsletter and Reports</a></li>
         <li><a href="/web/schedule.html">Schedule</a></li>
     </ul>
 
@@ -72,62 +71,43 @@
         <button id="authButton" class="login-btn">Login</button>
     </div>
 </nav>
+<!-- --------------------------------main content-------------------------------- -->
+    <main>
+        <section class="report-gallery">
+            <a href="/web/sp_teachers_profile.html" class="report-card">
+                <img src="/images/teachers-profile.png" alt="Teachers Profile">
+            </a>
 
-   <!-- --------------------------------main content-------------------------------- -->
-     
-    <div class="table-page">
-        <div class="page-header">
-            <div>
-                <h1>Newsletter and Reports</h1>
-                <p>Newsletter and Reports Documents</p>
-            </div>
-            <button id="uploadBtn" class="upload-btn staff-only">
-                Upload File
-            </button>
-        </div>
-        <div class="toolbar">
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search files...">
-        </div>
-        <div class="table-container">
-            <table class="files-table">
-                <thead>
-                    <tr>
-                        <th>File Name</th>
-                        <th>Uploaded By</th>
-                        <th>Date Uploaded</th>
-                        <th>Size</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="fileTableBody">
-                    <!-- JavaScript will insert files here -->
-                    <tr>
-                        <td colspan="5" class="empty">
-                            No files uploaded.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-<!-- Hidden Upload Window -->
-    <div id="uploadModal" class="upload-modal">
-        <div class="upload-box">
-            <span class="close-upload">&times;</span>
-            <h2>Upload Learning Environment File</h2>
-            <input
-                type="file"
-                id="fileInput"
-            >
-            <button id="uploadFileButton">
-                Upload
-            </button>
-        </div>
-    </div>
-    
+            <a href="/web/sp_sreat.html" class="report-card">
+                <img src="/images/sreat.png" alt="School Report on Enrolment and Assigment of Teachers">
+            </a>
+
+            <a href="/web/sp_school_building_inventory.html" class="report-card">
+                <img src="/images/school-building-inventory.png" alt="School Building Inventory">
+            </a>
+
+            <div class="gallery-divider"></div>
+
+            <a href="/web/sp_supreme_learners_elementary_government.html" class="report-card">
+                <img src="/images/supreme-learners-elementary-goverment.png" alt="Supreme Learners Elementary Government">
+            </a>
+
+            <a href="/web/sp_parent_teachers_association.html" class="report-card">
+                <img src="/images/parent-teacher-association.png" alt="Parent-Teacher Association">
+            </a>
+
+            <a href="/web/sp_sgc_officers.html" class="report-card">
+                <img src="/images/sgc-officers.png" alt="SGC Officers">
+            </a>
+
+            <div class="gallery-divider"></div>
+
+            <a href="/web/sp_teachers_coordinatorship.html" class="report-card wide">
+                <img src="/images/teachers-coordinatorship.png" alt="Teachers Coordinatorship">
+            </a>
+
+        </section>
+    </main>
     <!-- --------------------------------footer-------------------------------- -->
     <div class="deped">
         <a href="https://depedcalabarzon.ph/"><img src="/images/deped.png"></a>
@@ -149,6 +129,6 @@
         <div class="footerbottom">
             <p>&copy; <span id="current-year"></span> ACES. All rights reserved.</p>
         </div>
-    </footer> 
+    </footer>  
 </body>
 </html>

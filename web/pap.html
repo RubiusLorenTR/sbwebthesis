@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACE SBM</title>
-    <link rel="stylesheet" href="/web/table.css">
+    <link rel="stylesheet" href="/web/home_aboutus_schedule_pap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
     <script type="module" src="/web/scripts.js"></script>
-    <script type="module" src="/web/table.js"></script>
 </head>
 <!-- --------------------------------navbar login-------------------------------- -->
 <body>  
@@ -44,10 +43,10 @@
     </div>
 
     <ul class="nav-links">
-        <li><a href="/web/home.html" >Home</a></li>
+        <li><a href="/web/home.html">Home</a></li>
         <li><a href="/web/aboutus.html">About us</a></li>
         <li class="staff-only"><a href="/web/schoolperformance.html">School Performance</a></li>
-        <li class="staff-only"><a href="/web/pap.html">Programs and Projects</a></li>
+        <li class="staff-only"><a href="/web/pap.html" class="here">Programs and Projects</a></li>
         <li><a href="/web/transparency.html">Transparency</a></li>
 
         <li class="Issuances-dropdown staff-only">
@@ -64,7 +63,7 @@
         </li>
 
         <li class="staff-only"><a href="/web/schoolprofile.html">School Profile</a></li>
-        <li><a href="/web/newsletterandreports.html" class="here">Newsletter and Reports</a></li>
+        <li><a href="/web/newsletterandreports.html">Newsletter and Reports</a></li>
         <li><a href="/web/schedule.html">Schedule</a></li>
     </ul>
 
@@ -73,62 +72,51 @@
     </div>
 </nav>
 
-   <!-- --------------------------------main content-------------------------------- -->
-     
-    <div class="table-page">
-        <div class="page-header">
-            <div>
-                <h1>Newsletter and Reports</h1>
-                <p>Newsletter and Reports Documents</p>
+<!-- --------------------------------main content-------------------------------- -->
+    <main>
+        <h2>Programs and Projects</h2>
+        <section class="content-section">
+            <div class="section-title">
+                <h2>School Programs</h2>
             </div>
-            <button id="uploadBtn" class="upload-btn staff-only">
-                Upload File
-            </button>
-        </div>
-        <div class="toolbar">
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search files...">
-        </div>
-        <div class="table-container">
-            <table class="files-table">
-                <thead>
-                    <tr>
-                        <th>File Name</th>
-                        <th>Uploaded By</th>
-                        <th>Date Uploaded</th>
-                        <th>Size</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="fileTableBody">
-                    <!-- JavaScript will insert files here -->
-                    <tr>
-                        <td colspan="5" class="empty">
-                            No files uploaded.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-<!-- Hidden Upload Window -->
-    <div id="uploadModal" class="upload-modal">
-        <div class="upload-box">
-            <span class="close-upload">&times;</span>
-            <h2>Upload Learning Environment File</h2>
-            <input
-                type="file"
-                id="fileInput"
-            >
-            <button id="uploadFileButton">
-                Upload
-            </button>
-        </div>
-    </div>
+            <div class="programs-container">
+                <div class="programs-card">
+                    <h3>K to 12 Basic Education Program</h3>
+                    <p>Provides learners with a comprehensive and learner-centered curriculum from Kindergarten to Grade 6.
+                    </p>
+                </div>
+                <div class="programs-card">
+                    <h3>Special Science Class (SSC)</h3>
+                    <p>Provides enhanced Science and Mathematics instruction while developing critical thinking, scientific inquiry, and innovation.
+                    </p>
+                </div>
+                <div class="programs-card">
+                    <h3>Journalism Class</h3>
+                    <p>Develops writing, reporting, editing, and communication skills through campus journalism and competitions.
+                    </p>
+                </div>
+                <div class="programs-card">
+                    <h3>Brigada Eskwela</h3>
+                    <p>A community volunteer program that prepares school facilities before the opening of classes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-title">
+                <h2>Featured Project</h2>
+            </div>
+            <a href="/web/pap_table.html" class="project-card">
+                <div class="project-image">
+                    <img src="/images/programs-and-projects.png" alt="Progrmas and Projects Image">
+                </div>
+            </a>
+        </section>
+    </main>
     
     <!-- --------------------------------footer-------------------------------- -->
+
     <div class="deped">
         <a href="https://depedcalabarzon.ph/"><img src="/images/deped.png"></a>
         <div class="deped-content">
@@ -149,6 +137,6 @@
         <div class="footerbottom">
             <p>&copy; <span id="current-year"></span> ACES. All rights reserved.</p>
         </div>
-    </footer> 
+    </footer>  
 </body>
 </html>

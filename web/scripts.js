@@ -133,8 +133,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 loginButton.textContent = "Login";
                 return;
             }
-            if (profile.role === "admin" ||profile.role === "staff") {
+            if (profile.role === "staff") {
                 window.location.href ="/web/home.html";
+            }
+            if (profile.role === "admin") {
+                window.location.href ="/Admin/a_dashboard.html";
             }
             else {
                 loginMessage.textContent = "Invalid user role.";
