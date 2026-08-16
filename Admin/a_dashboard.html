@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Admin/a.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Admin-Dashboard</title>
+        <body>
+
+            <!------ NAVIGATION FOR ADMIN ------>
+            <nav>
+                <div class="nav-bar">
+                    <i class="fa-solid fa-bars menu"></i>
+                    <div class="admin-logo">ACES</div>
+                    <div class="nav-list">
+                        <div class="mobileview-logo">
+                            <span class="aces">ACES</span>
+                            <i class="fa-solid fa-xmark close"></i>
+                        </div>
+                        <ul class="list">
+                            <li><a href="/Admin/a_dashboard.html">Home</a></li>
+                            <li><a href="/Admin/a_school_perf.html">School Performance</a></li>
+                            <li><a href="/Admin/a_prog_proj.html">Programs & Projects</a></li>
+                            <li><a href="/Admin/a_transparency.html">Transparency</a></li>
+
+                            <li><a href="#">Issuances</a>
+                             <i class="fa-solid fa-angle-down admin-arrow"></i>
+                             <ul class="Issuance-Dropdown">
+                                <li><a href="#">Issuance 2027</a></li>
+                                <li><a href="#">Issuance 2026</a></li>
+                                <li><a href="#">Issuance 2025</a></li>
+                                <li><a href="#">Issuance 2024</a></li>
+                             </ul>
+                            </li>
+                          
+                            <li><a href="/Admin/a_news_report.html">Newsletter & Reports</a></li>
+                            <li><a href="#">Schedule</a></li>
+                            <li><a href="/Admin/a_schoolprofile.html">School Profile</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search"></i>
+                        <div class="search-input">
+                            <input type="search" placeholder="Search...">
+                        </div>
+                    </div>
+
+                    <div class="notification-section">
+                        <i class="fa-solid fa-bell notification" onclick="notifInfo()"></i>
+                        <div class="notification-menu" id="notifMenu">
+                            <div class="notif-menu">
+                                <h4>Notification</h4>
+                                <div class="notif">
+                                    <img src="/images/user1.png" class="user-profile">
+                                </div>
+                                <div class="notif-update">
+                                     <p>Lorem Ipsum <span class="activity">Uploaded a new file</span></p>
+                                     <span class="date">july 10, 2026</span>
+                                </div>
+
+                                <div class="notif">
+                                    <img src="/images/user2.png" class="user-profile">
+                                    
+                                </div>
+                                <div class="notif-update">
+                                     <p>Lorem Ipsum <span class="activity">Deleted a new file</span></p>
+                                     <span class="date">july 10, 2026</span>
+                                </div>
+
+                                 <div class="notif">
+                                    <img src="/images/user3.png" class="user-profile">
+                                </div>
+                                <div class="notif-update">
+                                     <p>Lorem Ipsum <span class="activity">Modified a new file</span></p>
+                                     <span class="date">july 10, 2026</span>
+                                </div>
+
+                                <div class="notif">
+                                    <img src="/images/user4.png" class="user-profile">
+                                </div>
+                                <div class="notif-update">
+                                     <p>Lorem Ipsum <span class="activity">Uploaded a new file</span></p>
+                                     <span class="date">july 10, 2026</span>
+                                </div>   
+                            </div>  
+                        </div>
+                    </div>
+
+                    <div class="account-section">
+                        <i class="fa-solid fa-circle-user account" onclick="openMenu()"></i>
+                         <div class="sub-menu-acc" id="accMenu">
+                            <div class="sub-menu">
+                                <div class="user">
+                                    <img src="/images/user1.png" class="user-profile">
+                                    <h3 id="viewName">Acxel G. Benoyo</h3>
+                                </div>
+                                <hr>
+            
+                            <a href="/Admin/a_up.html" class="sub-menus">
+                                <i class="fa-solid fa-user"></i>
+                                <p>User Profile</p>
+                                <span>›</i></span>
+                            </a>
+
+                            <a href="/Admin/a_us.html" class="sub-menus">
+                                <i class="fa-solid fa-gear"></i>
+                                <p>User Settings</p>
+                                <span>›</i></span>
+                            </a>
+
+                            <a href="/Admin/a_aboutus.html" class="sub-menus">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <p>About Us</p>
+                                <span>›</i></span>
+                            </a>
+
+                            <a href="#" class="sub-menus">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <p>Logout</p>
+                            </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-grid">
+                <div class="carousel-block">
+                    <h2 class="section-title">Welcome to Dashboard!</h2>
+                    <div class="carousel-placeholder">
+                        <div class="img-slides">
+                        <img src="/images/achievement-report.png">
+                        <img src="/images/performance-indicator.png">
+                        <img src="/images/programs-and-projects.png">
+                        <img src="/images/supreme-learners-elementary-goverment.png">
+                        </div>
+
+                     <div class="slider-button">
+                        <span class="next"><i class="fa-solid fa-angle-right"></i></span>
+                        <span class="previous"><i class="fa-solid fa-angle-left"></i></span>
+                     </div>
+
+                        <div class="dots">
+                            <div class="dot active" attr='0'></div>
+                            <div class="dot" attr='1'></div>
+                            <div class="dot" attr='2'></div>
+                            <div class="dot" attr='3'></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-recent-activities">
+                    <h2 class="section-title">Recent Activities</h2>
+                    <ul class="activity-list">
+                        <li>
+                            <a href="#">
+                                <span class="activity-date">June 15, 2026</span>
+                                <p>Acxel Benoyo uploaded a newfile</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="view-all">View All</button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        
+                    
+             <script src="/Admin/a_scripts.js"></script>
+        </body>
+</html>
