@@ -1,0 +1,869 @@
+/* ==================================== ADMIN UI CSS ==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* == Global Styles == */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Google Sans', sans-serif;
+}
+:root{
+    --primary-color: #0e8708;
+    --secondary-color: #db4437;
+    --accent-color: #f4b400;
+    --background-color: #ffffff;
+    --text-color1:#ffffff;
+    --text-color: #202124;
+    --button-highlight:#fc034a;
+}
+body {
+     min-height: 100vh; 
+     background-color: var(--background-color);
+     display: flex;
+     flex-direction: column;
+}
+html, body{
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* ==== main nav ==== */
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+/* =========================== schoolperformance  =========================== */
+
+/* ==== school performance nav ==== */
+
+.nav-schoolperformance{
+    padding: 10px;
+    display: flex; 
+    left: 0;
+    right: 0;
+}
+.nav-schoolperformance a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+.nav-schoolperformance h1{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-left: 5px;
+}
+
+/* ==== school-perf buttons ==== */
+
+.button-area {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.buttons {
+    display: flex;
+    top: 60px; 
+    gap: 10px;
+    padding: 30px;
+}
+.buttons button {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--text-color1);
+    justify-content: space-between;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    align-items: center;
+    gap: 5px; 
+    padding: 15px;
+}
+.buttons i{
+    margin-left: 5px;
+}
+.buttons button:hover {
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+
+/* ==== school performance section ==== */
+.schoolperformance-section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+.report-gallery {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 36px;
+    padding: 24px;
+}
+
+.report-card {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.report-card.wide {
+    max-width: 600px;
+}
+
+.report-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.report-card.wide img {
+    aspect-ratio: 3 / 2;
+}
+
+.report-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-divider {
+    grid-column: 1 / -1;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+
+/* =========================== program & projects =========================== */
+
+/* ==== programs & projects nav ==== */
+
+.nav-program-projects{
+    padding: 10px;
+    display: flex; 
+    left: 0;
+    right: 0;
+}
+.nav-program-projects a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+.nav-program-projects h1{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-left: 5px;
+}
+
+/* ==== programs & projects buttons ==== */
+
+.button-area {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.buttons {
+    display: flex;
+    top: 60px; 
+    gap: 10px;
+    padding: 30px;
+}
+.buttons button {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--text-color1);
+    justify-content: space-between;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    align-items: center;
+    gap: 5px; 
+    padding: 15px;
+}
+.buttons i{
+    margin-left: 5px;
+}
+.buttons button:hover {
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+
+/* ==== programs & projects section ==== */
+.program-projects-section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+.program-projects-gallery {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 36px;
+    padding: 24px;
+}
+
+.program-projects-card {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.program-projects-card.wide {
+    max-width: 600px;
+}
+
+.program-projects-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+    display: block;
+}
+
+.program-projects-card.wide img {
+    aspect-ratio: 3 / 2;
+}
+
+.program-projects-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-divider {
+    grid-column: 1 / -1;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+/* =========================== transparency =========================== */
+
+/* ==== transparency nav ==== */
+
+.nav-transparency{
+    padding: 10px;
+    display: flex; 
+    left: 0;
+    right: 0;
+}
+.nav-transparency a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+.nav-transparency h1{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-left: 5px;
+}
+
+/* ==== transparency buttons ==== */
+
+.button-area {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.buttons {
+    display: flex;
+    top: 60px; 
+    gap: 10px;
+    padding: 30px;
+}
+.buttons button {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--text-color1);
+    justify-content: space-between;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    align-items: center;
+    gap: 5px; 
+    padding: 15px;
+}
+.buttons i{
+    margin-left: 5px;
+}
+.buttons button:hover {
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+
+/* ==== transparency section ==== */
+.transparency-section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+.transparency-gallery {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 36px;
+    padding: 24px;
+}
+
+.transparency-card {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.transparency-card.wide {
+    max-width: 600px;
+}
+
+.transparency-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.transparency-card.wide img {
+    aspect-ratio: 3 / 2;
+}
+
+.transparency-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-divider {
+    grid-column: 1 / -1;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+.schoolperformance-section, 
+.program-projects-section, 
+.transparency-section {
+    flex: 1 0 auto; 
+}
+
+/* =========================== schedule =========================== */
+
+/* ------ no layout ------ */
+
+
+/* =========================== newsletter & reports =========================== */
+
+/* ==== newsletter & reports nav ==== */
+
+.nav-newsletter-reports{
+    padding: 10px;
+    display: flex; 
+    left: 0;
+    right: 0;
+}
+.nav-newsletter-reports a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+.nav-newsletter-reports h1{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-left: 5px;
+}
+
+/* ==== newsletter & reports buttons ==== */
+
+.button-area {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.buttons {
+    display: flex;
+    top: 60px; 
+    gap: 10px;
+    padding: 30px;
+}
+.buttons button {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--text-color1);
+    justify-content: space-between;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    align-items: center;
+    gap: 5px; 
+    padding: 15px;
+}
+.buttons i{
+    margin-left: 5px;
+}
+.buttons button:hover {
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+
+/* ==== newsletter & reports section ==== */
+.newsletter-reports-section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+.newsletter-reports-gallery {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 36px;
+    padding: 24px;
+}
+
+.newsletter-reports-card {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.newsletter-reports-card.wide {
+    max-width: 600px;
+}
+
+.newsletter-reports-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+    display: block;
+}
+
+.newsletter-reports-card.wide img {
+    aspect-ratio: 3 / 2;
+}
+
+.newsletter-reports-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-divider {
+    grid-column: 1 / -1;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+
+/* =========================== schedule =========================== */
+
+/* ------ no layout ------ */
+
+
+/* =========================== school profile =========================== */
+
+/* ==== school-profile nav ==== */
+
+.nav-school-profile{
+    padding: 10px;
+    display: flex; 
+    left: 0;
+    right: 0;
+}
+.nav-school-profile a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+.nav-school-profile h1{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-left: 5px;
+}
+
+/* ==== school-profile buttons ==== */
+
+.button-area {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.buttons {
+    display: flex;
+    top: 60px; 
+    gap: 10px;
+    padding: 30px;
+}
+.buttons button {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--text-color1);
+    justify-content: space-between;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    align-items: center;
+    gap: 5px; 
+    padding: 15px;
+}
+.buttons i{
+    margin-left: 5px;
+}
+.buttons button:hover {
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+
+/* ==== school-profile section ==== */
+
+.school-profile-section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+.school-profile-gallery {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 36px;
+    padding: 24px;
+}
+
+.school-profile-card {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.school-profile-card.wide {
+    max-width: 600px;
+}
+
+.school-profile-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.school-profile-card.wide img {
+    aspect-ratio: 3 / 2;
+}
+
+.school-profile-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-divider {
+    grid-column: 1 / -1;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+
+
+/* =========================== upload, scan modal =========================== */
+
+/* ==== uploadmodal ==== */
+
+.popup-modal {
+    display: none;
+    left: 0;
+    right: 0;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-box {
+    background-color: var(--background-color);
+    width: 350px;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.modal-box h2 {
+    margin-bottom: 5px;
+    padding: 10px 0px;
+    color: var(--primary-color);
+}
+
+.modal-box p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.drag-section {
+    border: 1px dashed var(--primary-color);
+    min-height: 230px;
+    background-image: linear-gradient(180deg, var(--background-color));
+    margin: 5px 10px 10px 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.drag-section div.upload-area:first-child {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    width: 100px;
+    margin: auto;
+}
+
+.drag-section div.upload-area:last-child {
+   visibility: hidden;
+   opacity: 0;
+   color: var(--text-color);
+   font-size: 30px;
+   font-weight: 400;
+   color: var(--primary-color);
+   position: absolute;
+   top: 0px;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   margin: auto;
+   width: 100px;
+   height: 40px;
+   pointer-events: none;
+   transform: scale(0.5);
+   transition-duration: 0.3s;
+}
+
+.drag-section .upload-icon{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+.drag-section span,
+.drag-section button{
+    display: block;
+    margin: auto;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.drag-section input{
+    display: none;
+}
+
+.drag-section button{
+    color: var(--text-color1);
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 2px 2px 0px var(--text-color);
+}
+.drag-section button:hover{
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+/* ==== scan modal ==== */
+
+.scan-modal {
+    display: none;
+    left: 0;
+    right: 0;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.scan-box {
+    background-color: var(--background-color);
+    width: 350px;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.scan-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.scan-box h2 {
+    margin-bottom: 5px;
+    padding: 10px 0px;
+    color: var(--primary-color);
+}
+
+.scan-box p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.scan-section {
+    border: 1px dashed var(--primary-color);
+    min-height: 230px;
+    background-image: linear-gradient(180deg, var(--background-color));
+    margin: 5px 10px 10px 10px;
+    border-radius: 8px;
+    position: relative;
+}
+.scan-section .scan-area{
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 300;
+    width: 100px;
+    margin: auto;
+}
+.scan-section .scan-icon{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: var(--primary-color);
+}
+.scan-section button{
+    display: block;
+    margin: auto;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.scan-section button{
+    color: var(--text-color1);
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 2px 2px 0px var(--text-color);
+}
+.scan-section button:hover{
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* --------------------------------Footer-------------------------------- */
+footer {
+    width: 100%;
+    min-height: 120px;
+    padding: 30px 80px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #1e1e38;
+    position: relative;
+    bottom: 0;
+
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background: transparent;
+}
+.socials a {
+    color: var(--text-color1);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.socials a:hover {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+.footerbottom {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-color1);
+}

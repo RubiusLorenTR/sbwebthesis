@@ -7,12 +7,12 @@
 }
 :root{
     --primary-color: #0e8708;
-    --secondary-color: #2feb25;
+    --secondary-color: #41b73a;
     --accent-color: #f4b400;
     --background-color: #ffffff;
     --text-color1:#ffffff;
     --text-color: #202124;
-    --button-highlight:#fc034a;
+    --button-highlight:#f4fcf4;
 }
 .staff-only,
 .admin-only {
@@ -310,6 +310,7 @@ footer {
 .learn-more-btn:hover {
     background-color: var(--button-highlight);
     transform: translateY(-2px);
+    color: var(--secondary-color);
 }
 /* --------------------------------News Layout Grid-------------------------------- */
 .news-section {

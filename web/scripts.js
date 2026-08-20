@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href ="/web/home.html";
             }
             if (profile.role === "admin") {
-                window.location.href ="/Admin/a_dashboard.html";
+                window.location.href ="/web/a_dashboard.html";
             }
             else {
                 loginMessage.textContent = "Invalid user role.";

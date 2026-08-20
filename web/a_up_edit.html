@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Profile</title>
+    <link rel="stylesheet" href="/web/a_up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/web/a_scripts.js"></script>
+</head>
+
+<!------ NAVIGATION FOR USERPROFILE -->
+<body>       
+    <nav>
+        <div class="nav-user-profile">
+            <a href="/web/a_up.html">
+                <i class="fa-solid fa-angle-left left"></i>
+            </a>
+            <h1>Edit Profile</h1>
+        </div>
+    </nav>
+
+<!-- EDIT VIEW-->
+    <div class="edit-user" id="editMode">
+        <div class="info-field">
+            <label for="selectImage">Profile Picture</label>
+            <input type="file" id="selectImage">
+        </div>
+
+        <div class="info-field">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="Your First Name">
+        </div>
+
+        <div class="info-field">
+            <label for="middleName">Middle Name</label>
+            <input type="text" id="middleName" placeholder="Your Middle Name">
+        </div>
+
+        <div class="info-field">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Your Last Name">
+        </div>
+
+        <div class="info-field">
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" placeholder="Your Email">
+        </div>
+
+        <div class="info-field">
+            <label for="userPosition">Position</label>
+            <input type="text" id="userPosition" placeholder="Your Position">
+        </div>
+
+        <div class="info-field">
+            <label for="userHobby">Hobby</label>
+            <input type="text" id="userHobby" placeholder="Your Hobby">
+        </div>
+
+        <button class="save" id="save">Save Profile</button>
+        <button onclick="navigateTo('editMode' , 'view' )"  class="cancel">Cancel</button>
+    </div> 
+        
+    <footer>
+        <div class="socials">
+            <a href="https://www.facebook.com/DepEdACES109582" class="fa-brands fa-facebook-f"></a>
+            <a href="#" class="fa-solid fa-at"></a>
+            <a href="#" class="fa-solid fa-phone"></a>
+        </div>
+        <div class="footerbottom">
+            <p>&copy; <span id="current-year"></span> ACES. All rights reserved.</p>
+        </div>
+    </footer>  
+</body>
+</html>
