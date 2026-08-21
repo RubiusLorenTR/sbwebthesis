@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin-Dashboard</title>
+    <title>Admin Schedule</title>
     <link rel="stylesheet" href="/web/a.css">
+    <link rel="stylesheet" href="/web/home_aboutus_schedule_pap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script type="module" src="/web/a_scripts.js"></script>
+    <script type="module" src="/web/schedule.js"></script>
+    <script type="module" src="/web/scripts.js"></script>
 </head>
 <!-- ADMIN NAVIGATION -->
 <body>
@@ -149,52 +152,41 @@
             </div>
         </div>
     </nav>
-
-    <section class="dashboard-section"> 
-        <div class="container">
-            <div class="dashboard-grid">
-                <div class="carousel-block">
-                    <h2 class="section-title"> Welcome to Dashboard! </h2>
-                    <div class="carousel-placeholder">
-                        <div class="img-slides">
-                            <img src="/images/leadership.png" alt="Achievement Report">
-                            <img src="/images/curriculum-and-teaching.png" alt="Performance Indicator">
-                            <img src="/images/programs-and-projects.png" alt="Programs and Projects">
-                            <img src="/images/supreme-learners-elementary-goverment.png" alt="Supreme Learners Elementary Government">
-                        </div>
-
-                        <div class="slider-button">
-                            <span class="next">
-                                <i class="fa-solid fa-angle-right"></i>
-                            </span>
-                            <span class="previous">
-                                <i class="fa-solid fa-angle-left"></i>
-                            </span>
-                        </div>
-                        <div class="dots">
-                            <div class="dot active" attr="0"></div>
-                            <div class="dot"  attr="1"></div>
-                            <div class="dot" attr="2"></div>
-                            <div class="dot" attr="3"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dashboard-recent-activities">
-                    <h2 class="section-title"> Recent Activities </h2>
-                    <ul class="activity-list">
-                        <li>
-                            <a href="#">
-                                <span class="activity-date"> June 15, 2026 </span>
-                                <p> Acxel Benoyo uploaded a newfile </p>
-                            </a>
-                        </li>
-                    </ul>
-                    <button class="view-all"> View All </button>
-                </div>
+<!-- --------------------------------main content-------------------------------- -->
+    <main>
+    <section class="schedule-section">
+        <div class="schedule-page">
+            <div class="schedule-header">
+                <h1>Schedule</h1>
+                <p>Calendar of Activities</p>
             </div>
+            <button id="scheduleUploadBtn" class="change-btn admin-only">
+                <i class="fa-solid fa-upload"></i>
+                Change Schedule
+            </button>
+        </div>
+        <div class="schedule-container">
+            <img
+                id="scheduleImage"
+                src=""
+                alt="School Schedule">
         </div>
     </section>
+
+    <div id="scheduleUploadModal" class="uploadsch-modal">
+        <div class="upload-box">
+            <span class="close-upload">&times;</span>
+            <h2>Upload Schedule</h2>
+            <input
+                type="file"
+                id="scheduleFile"
+                accept=".png,.jpg,.jpeg">
+            <button id="uploadScheduleButton">
+                Upload
+            </button>
+        </div>
+    </div>
+    </main>
 
     <footer>
         <div class="socials">

@@ -23,6 +23,8 @@
 body {
   height: 100vh;
   background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
 }
 html, body{
     scrollbar-width: none;
@@ -524,15 +526,14 @@ footer {
     width: 100%;
     min-height: 120px;
     padding: 30px 80px;
-    margin: 0;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
     background-color: #1e1e38;
-    position: relative; 
-    bottom: 0;
+    position: relative;
 }
 .socials {
     display: flex;

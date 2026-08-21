@@ -7,7 +7,7 @@ const supabase = createClient(supabaseUrl, supabaseKey, { auth: { persistSession
 
 console.log('Supabase client initialized:', supabase);
 
-/* --------------------- Schedule --------------------- */
+// --------------------- Schedule --------------------- 
 document.addEventListener("DOMContentLoaded", () => {
 
     const scheduleImage = document.getElementById("scheduleImage");
@@ -79,33 +79,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 loadSchedule();
             };
-
             scheduleList.appendChild(item);
-
         });
-
     }
     if (scheduleUploadBtn) {
-
         scheduleUploadBtn.onclick = () => {
             scheduleUploadModal.style.display = "flex";
         };
-
     }
 
     if (closeScheduleUpload) {
-
         closeScheduleUpload.onclick = () => {
             scheduleUploadModal.style.display = "none";
         };
-
     }
     if (uploadScheduleButton) {
-
         uploadScheduleButton.onclick = async () => {
-
             const file = scheduleFileInput.files[0];
-
             if (!file) {
                 alert("Please choose an image.");
                 return;
@@ -152,9 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scheduleFileInput.value = "";
 
             alert("Schedule uploaded successfully!");
-
         };
-
     }
     loadSchedule();
     loadScheduleList();

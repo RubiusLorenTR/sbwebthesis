@@ -1,79 +1,131 @@
+import{ createClient } from '@supabase/supabase-js'
 
-/*log in modal*/
+const supabaseUrl = 'https://hyljgkbyaekgfwrovjnj.supabase.co'
+const supabaseKey = 'sb_publishable_OxfQbHyrkLVXrisOS5kUhw_1LhfM_dD'
+
+const supabase = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: true, autoRefreshToken: true } });
+
+
+// -------------------------------- LOGIN MODAL -------------------------------- 
+
 function openLoginModal() {
-    document.getElementById("loginModal").style.display = "flex";
-}   
-function closeLoginModal() {
-    document.getElementById("loginModal").style.display = "none";
+    const modal = document.getElementById("loginModal");
+    if (modal) {modal.style.display = "flex";}
 }
 
-/* Set the current year in the footer */
-document.addEventListener("DOMContentLoaded", function () {
-    const yearElement = document.getElementById("current-year");
+function closeLoginModal() {
+    const modal = document.getElementById("loginModal");
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
 
+// -------------------------------- CURRENT YEAR --------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const yearElement =
+        document.getElementById("current-year");
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
 });
 
-/*carousel*/
+// -------------------------------- CAROUSEL --------------------------------
+const slides =
+    document.querySelectorAll(".img-slides img");
 
-const slides = document.querySelectorAll(".img-slides img");
-const dots = document.querySelectorAll(".dot");
-const previous = document.querySelector(".previous");
-const next = document.querySelector(".next");
+const dots =
+    document.querySelectorAll(".dot");
+
+const previous =
+    document.querySelector(".previous");
+
+const next =
+    document.querySelector(".next");
 
 let currentSlide = 0;
 let slideInterval;
 
 
-
-
 function showSlide(index) {
+
+    if (slides.length === 0) {
+        return;
+    }
+
     slides.forEach(slide => {
+
         slide.style.display = "none";
+
     });
 
     dots.forEach(dot => {
+
         dot.classList.remove("active");
+
     });
 
     slides[index].style.display = "block";
-    dots[index].classList.add("active");
+
+    if (dots[index]) {
+
+        dots[index].classList.add("active");
+
+    }
     currentSlide = index;
 }
 
+
 function nextSlide() {
+    if (slides.length === 0) {
+        return;
+    }
     currentSlide++;
     if (currentSlide >= slides.length) {
         currentSlide = 0;
     }
     showSlide(currentSlide);
 }
+
 function previousSlide() {
+    if (slides.length === 0) {
+        return;
+    }
     currentSlide--;
     if (currentSlide < 0) {
         currentSlide = slides.length - 1;
     }
     showSlide(currentSlide);
 }
+
 function startAutoSlide() {
-    slideInterval = setInterval(nextSlide, 4000); 
+    if (slides.length === 0) {
+        return;
+    }
+    slideInterval = setInterval(nextSlide, 4000);
 }
+
 function resetTimer() {
     clearInterval(slideInterval);
     startAutoSlide();
 }
 
-next.addEventListener("click", () => {
-    nextSlide();
-    resetTimer();
-});
-previous.addEventListener("click", () => {
-    previousSlide();
-    resetTimer();
-});
+// -------------------------------- NEXT BUTTON --------------------------------
+if (next) {
+    next.addEventListener("click", () => {
+        nextSlide();
+        resetTimer();
+    });
+}
 
+// -------------------------------- PREVIOUS BUTTON --------------------------------
+if (previous) {
+    previous.addEventListener("click", () => {
+        previousSlide();
+        resetTimer();
+    });
+}
+
+// -------------------------------- DOTS --------------------------------
 dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
         showSlide(index);
@@ -81,100 +133,121 @@ dots.forEach((dot, index) => {
     });
 });
 
-showSlide(currentSlide);
-startAutoSlide();
+if (slides.length > 0) {
+    showSlide(currentSlide);
+    startAutoSlide();
+}
 
-/* ==================================== ADMIN UI JS ==================================== */
+// -------------------------------- SEARCH BAR --------------------------------
 
-// ====for search bar==== //
+const navBar = document.querySelector(".nav-bar");
+const searchBox = document.querySelector(".search-box .search");
 
-let navBar = document.querySelector(".nav-bar");
-let searchBox = document.querySelector(".search-box .search");
+if (searchBox && navBar) {
+    searchBox.addEventListener("click", () => {
+        navBar.classList.toggle("showsearch");
+        searchBox.classList.toggle("fa-xmark");
+    });
+}
 
-searchBox.addEventListener("click", () => {
-    navBar.classList.toggle("showsearch");
-    searchBox.classList.toggle("fa-xmark");
-});
+// -------------------------------- MOBILE MENU --------------------------------
 
+const menuOpen = document.querySelector(".nav-bar .menu");
+const close = document.querySelector(".nav-list .close");
+const navList = document.querySelector(".nav-list");
 
+if (menuOpen && navList) {
+    menuOpen.addEventListener("click", () => {
+        navList.style.left = "0";
+    });
+}
 
-// ====for menu toggle bar==== //
+if (close && navList) {
+    close.addEventListener("click", () => {
+        navList.style.left = "-100%";
+    });
+}
 
-let menuOpen = document.querySelector(".nav-bar .menu");
-let close = document.querySelector(".nav-list .close");
-let navList = document.querySelector(".nav-list");
+// -------------------------------- ACCOUNT MENU --------------------------------
 
-menuOpen.addEventListener("click", ()=> {
-  navList.style.left = "0";
-});
-  close.addEventListener("click", ()=> {
-  navList.style.left = "-100%";
-});
+const accountButton = document.getElementById("accountButton");
+const accountMenu = document.getElementById("accMenu");
 
+if (accountButton && accountMenu) {
+    accountButton.addEventListener("click", () => {
+        accountMenu.classList.toggle("toggle-menu");
+    });
+}
 
-// ====for upload file modal==== //
+// -------------------------------- NOTIFICATION MENU --------------------------------
 
+const notificationButton = document.getElementById("notificationButton");
+const notificationMenu = document.getElementById("notifMenu");
+
+if (notificationButton && notificationMenu) {
+    notificationButton.addEventListener("click", () => {
+        notificationMenu.classList.toggle(
+            "notif-toggle"
+        );
+    });
+}
+
+// -------------------------------- UPLOAD FILE MODAL --------------------------------
 function openpopupModal() {
-    document.getElementById("popupModal").style.display = "flex";
-}   
+    const modal =
+        document.getElementById("popupModal");
+    if (modal) {
+        modal.style.display = "flex";
+    }
+}
+
 function closepopupModal() {
-    document.getElementById("popupModal").style.display = "none";
+    const modal = document.getElementById("popupModal");
+    if (modal) {
+        modal.style.display = "none";
+    }
 }
 
+// -------------------------------- UPLOAD FILE --------------------------------
+const uploadBtn = document.querySelector(".upload-btn");
+const fileInput = document.querySelector(".fileInput");
 
+if (uploadBtn && fileInput) {
+    uploadBtn.addEventListener("click", () => {
+        fileInput.click();
+    });
+}
 
-// ====for upload file function==== //
-
-const dragArea = document.querySelector('.drag-section');
-const uploadBtn = document.querySelector('.upload-btn');
-const fileInput = document.querySelector('.fileInput');
-
-uploadBtn.onclick = () => fileInput.click();
-
-
-
-// ====for scan modal==== //
-
+// -------------------------------- SCAN MODAL --------------------------------
 function openscanModal() {
-    document.getElementById("scanModal").style.display = "flex";
-}   
+    const modal =
+        document.getElementById("scanModal");
+    if (modal) {
+        modal.style.display = "flex";
+    }
+}
+
 function closescanModal() {
-    document.getElementById("scanModal").style.display = "none";
+    const modal = document.getElementById("scanModal");
+    if (modal) {
+        modal.style.display = "none";
+    }
 }
 
+// -------------------------------- LOGOUT --------------------------------
+const logoutButton = document.getElementById("logoutButton");
 
-// ====for account menu toggle==== //
-
-function openMenu() {
-    let menu = document.getElementById("accMenu");
-    menu.classList.toggle("toggle-menu");
+if (logoutButton) {
+    logoutButton.addEventListener( "click", async (event) => { 
+        event.preventDefault(); 
+        console.log("Logging out...");
+        const { error } = await supabase.auth.signOut();
+        if (error) {console.error("Logout error:",error);
+            alert("Logout failed. Please try again.");
+            return;
+        }
+        console.log("Logout successful.");
+        window.location.href = "/web/home.html";
+        }
+    );
 }
-
-// ====for notification toggle==== //
-
-function notifInfo() {
-    let menu = document.getElementById("notifMenu");
-    menu.classList.toggle("notif-toggle");
-}
-
-// ==== for user profile ==== //
-
-
-const editBtn = document.getElementById('edit');
-const saveBtn = document.getElementById('save');
-const cancelBtn = document.getElementById('cancel');
-
-// ==== for user profile edit ==== //
-
-const userImg = document.getElementById('userImg');
-const userName = document.getElementById('userName');
-const userEmail = document.getElementById('userEmail');
-const userPhone = document.getElementById('userPhone');
-const userAddress = document.getElementById('userAddress');
-
-
-
-
-
-
-

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs and Projects</title>
+    <title>ACE SBM Projects and Programs</title>
     <link rel="stylesheet" href="/web/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
     <script type="module" src="/web/scripts.js"></script>
+    <script type="module" src="/web/table.js"></script>
 </head>
 
 <!-- --------------------------------navbar login-------------------------------- -->
@@ -47,13 +48,11 @@
         <ul class="nav-links">
             <li><a href="/web/home.html">Home</a></li>
             <li><a href="/web/aboutus.html">About us</a></li>
-            <li class="staff-only"><a href="/web/schoolperformance.html">School Performance</a></li>
-            <li class="staff-only"><a href="/web/pap.html" class="here">Programs and Projects</a></li>
+            <li class="staff-only"><a href="/web/schoolperformance.html" class="here">School Performance</a></li>
+            <li class="staff-only"><a href="/web/pap.html">Programs and Projects</a></li>
             <li><a href="/web/transparency.html">Transparency</a></li>
 
-            
-            <li class="Issuances-dropdown staff-only
-            ">
+            <li class="Issuances-dropdown staff-only">
                 <a href="#">Issuances</a>
                 <ul class="Issuances-dropdownmenu">
                     <li><a href="#">2027</a></li>
@@ -76,12 +75,12 @@
         </div>
     </nav>
 
-<!-- --------------------------------main content-------------------------------- --> 
+<!-- --------------------------------main content-------------------------------- -->
     <div class="table-page">
         <div class="page-header">
             <div>
-                <h1>Programs and Projects</h1>
-                <p>Programs and Projects Documents</p>
+                <h1>Projects and Programs</h1>
+                <p>Projects and Programs Documents</p>
             </div>
             <button id="uploadBtn" class="upload-btn staff-only">
                 Upload File
@@ -115,12 +114,11 @@
             </table>
         </div>
     </div>
-    
 <!-- -------------------------------- Hidden Upload Window -------------------------------- -->
     <div id="uploadModal" class="upload-modal">
         <div class="upload-box">
             <span class="close-upload">&times;</span>
-            <h2>Upload Program or Project File</h2>
+            <h2>Upload Projects and Programs File</h2>
             <input
                 type="file"
                 id="fileInput"
@@ -132,26 +130,30 @@
     </div>
     
 <!-- --------------------------------footer-------------------------------- -->
-    <div class="deped">
-        <a href="https://depedcalabarzon.ph/"><img src="/images/deped.png"></a>
-        <div class="deped-content">
-            <h3>Department of Education CALABARZON</h3>
-            <p>The Department of Education CALABARZON is committed to providing quality
-                , accessible, and inclusive education for all learners in the region. 
-                It strives to develop competent, responsible, and globally competitive 
-                individuals through excellence in education.</p>
-        </div>
-    </div>
-
-    <footer>
-        <div class="socials">
-            <a href="https://www.facebook.com/DepEdACES109582" class="fa-brands fa-facebook-f"></a>
-            <a href="#" class="fa-solid fa-at"></a>
-            <a href="#" class="fa-solid fa-phone"></a>
-        </div>
-        <div class="footerbottom">
-            <p>&copy; <span id="current-year"></span> ACES. All rights reserved.</p>
-        </div>
-    </footer>  
+    <footer class="site-footer">
+        <section class="deped">
+            <a href="https://depedcalabarzon.ph/" target="_blank">
+                <img src="/images/deped.png" alt="Department of Education CALABARZON">
+            </a>
+            <div class="deped-content">
+                <h3>Department of Education CALABARZON</h3>
+                <p>The Department of Education CALABARZON is committed
+                    to providing quality, accessible, and inclusive
+                    education for all learners in the region. It strives
+                    to develop competent, responsible, and globally
+                    competitive individuals through excellence in education.</p>
+            </div>
+        </section>
+        <section class="footer-bottom">
+            <div class="socials">
+                <a href="https://www.facebook.com/DepEdACES109582" class="fa-brands fa-facebook-f"></a>
+                <a href="#" class="fa-solid fa-at"></a>
+                <a href="#" class="fa-solid fa-phone"></a>
+            </div>
+            <div class="footerbottom">
+                <p>&copy; <span id="current-year"></span> ACES. All rights reserved.</p>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

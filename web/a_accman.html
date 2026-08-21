@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin-Dashboard</title>
+    <title>Account Management</title>
     <link rel="stylesheet" href="/web/a.css">
+    <link rel="stylesheet" href="/web/a_accman.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script type="module" src="/web/a_scripts.js"></script>
+    <script type="module" src="/web/scripts.js"></script>
+    <script type="module" src="/web/a_accman.js"></script>
 </head>
-<!-- ADMIN NAVIGATION -->
+
+<!-- ================================ NAVIGATION ================================ -->
 <body>
     <nav>
         <div class="nav-bar">
             <i class="fa-solid fa-bars menu"></i>
-            <div class="admin-logo"> ACES </div>
+            <div class="admin-logo">ACES</div>
             <div class="nav-list">
                 <div class="mobileview-logo">
-                    <span class="aces"> ACES </span>
+                    <span class="aces">ACES</span>
                     <i class="fa-solid fa-xmark close"></i>
                 </div>
                 <ul class="list">
                     <li>
-                        <a href="/web/a_dashboard.html"> Home</a>
+                        <a href="/web/a_dashboard.html">Home</a>
                     </li>
                     <li>
                         <a href="/web/a_school_perf.html">School Performance</a>
@@ -33,7 +37,7 @@
                         <a href="/web/a_transparency.html">Transparency</a>
                     </li>
                     <li>
-                        <a href="#">Issuances</a>
+                        <a href="#"> Issuances</a>
                         <i class="fa-solid fa-angle-down admin-arrow"></i>
                         <ul class="Issuance-Dropdown">
                             <li>
@@ -60,7 +64,7 @@
                         <a href="/web/a_schoolprofile.html">School Profile</a>
                     </li>
                     <li>
-                        <a href="/web/a_accman.html">Acc Man</a>
+                        <a href="/web/a_accman.html" class="here">Acc Man</a>
                     </li>
                 </ul>
             </div>
@@ -71,11 +75,12 @@
                     <input type="search" placeholder="Search...">
                 </div>
             </div>
+
             <div class="notification-section">
                 <i class="fa-solid fa-bell notification" id="notificationButton"></i>
                 <div class="notification-menu" id="notifMenu">
                     <div class="notif-menu">
-                        <h4> Notification</h4>
+                        <h4>Notification</h4>
                         <div class="notif">
                             <img src="/images/user1.png" class="user-profile">
                         </div>
@@ -83,62 +88,35 @@
                             <p>
                                 <span class="activity">Uploaded a new file</span>
                             </p>
-                            <span class="date">July 10, 2026</span>
-                        </div>
-                        <div class="notif">
-                            <img src="/images/user2.png" class="user-profile">
-                        </div>
-                        <div class="notif-update">
-                            <p>
-                                <span class="activity">Deleted a new file</span>
-                            </p>
-                            <span class="date">July 10, 2026</span>
-                        </div>
-                        <div class="notif">
-                            <img src="/images/user3.png" class="user-profile">
-                        </div>
-                        <div class="notif-update">
-                            <p>
-                                <span class="activity">Modified a new file</span>
-                            </p>
-                            <span class="date">July 10, 2026</span>
-                        </div>
-                        <div class="notif">
-                            <img src="/images/user4.png" class="user-profile">
-                        </div>
-                        <div class="notif-update">
-                            <p>
-                                <span class="activity">Uploaded a new file</span>
-                            </p>
-                            <span class="date">July 10, 2026</span>
+                            <span class="date"> July 10, 2026 </span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="account-section">
-                <i class="fa-solid fa-circle-user account" id="accountButton" ></i>
+                <i class="fa-solid fa-circle-user account" id="accountButton"></i>
                 <div class="sub-menu-acc" id="accMenu">
                     <div class="sub-menu">
                         <div class="user">
                             <img src="/images/user1.png" class="user-profile">
-                            <h3 id="viewName">Acxel G. Benoyo</h3>
+                            <h3 id="viewName">Admin</h3>
                         </div>
                         <hr>
                         <a href="/web/a_up.html" class="sub-menus">
                             <i class="fa-solid fa-user"></i>
-                            <p> User Profile </p>
+                            <p>User Profile</p>
                             <span>›</span>
                         </a>
                         <a href="/web/a_us.html" class="sub-menus">
                             <i class="fa-solid fa-gear"></i>
-                            <p> User Settings</p>
+                            <p>User Settings</p>
                             <span>›</span>
                         </a>
                         <a href="/web/a_aboutus.html" class="sub-menus">
                             <i class="fa-solid fa-circle-info"></i>
                             <p>About Us</p>
-                            <span> ›</span>
+                            <span>›</span>
                         </a>
                         <a href="#" id="logoutButton" class="sub-menus">
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -150,51 +128,108 @@
         </div>
     </nav>
 
-    <section class="dashboard-section"> 
-        <div class="container">
-            <div class="dashboard-grid">
-                <div class="carousel-block">
-                    <h2 class="section-title"> Welcome to Dashboard! </h2>
-                    <div class="carousel-placeholder">
-                        <div class="img-slides">
-                            <img src="/images/leadership.png" alt="Achievement Report">
-                            <img src="/images/curriculum-and-teaching.png" alt="Performance Indicator">
-                            <img src="/images/programs-and-projects.png" alt="Programs and Projects">
-                            <img src="/images/supreme-learners-elementary-goverment.png" alt="Supreme Learners Elementary Government">
-                        </div>
+    <main class="account-page">
+        <div class="account-container">
+            <div class="account-header">
+                <div>
+                    <h1>Account Management</h1>
+                    <p>Manage administrator and staff accounts.</p>
+                </div>
+                <button id="addAccountButton" class="add-account-btn">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Add Account
+                </button>
+            </div>
 
-                        <div class="slider-button">
-                            <span class="next">
-                                <i class="fa-solid fa-angle-right"></i>
-                            </span>
-                            <span class="previous">
-                                <i class="fa-solid fa-angle-left"></i>
-                            </span>
-                        </div>
-                        <div class="dots">
-                            <div class="dot active" attr="0"></div>
-                            <div class="dot"  attr="1"></div>
-                            <div class="dot" attr="2"></div>
-                            <div class="dot" attr="3"></div>
-                        </div>
+            <div class="account-toolbar">
+                <div class="account-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="accountSearch" placeholder="Search accounts...">
+                </div>
+            </div>
+
+            <div class="accounts-table-container">
+                <table class="accounts-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Account ID</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="accountsTableBody">
+                        <tr>
+                            <td colspan="5" class="loading">Loading accounts...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div id="accountModal" class="account-modal">
+        <div class="account-modal-box">
+            <button id="closeAccountModal" class="close-account-modal">&times;</button>
+            <h2>Add New Account</h2>
+            <p class="modal-description">Create a new staff or administrator account.</p>
+            <form id="addAccountForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName"> Last Name </label>
+                        <input type="text" id="lastName" required>
                     </div>
                 </div>
 
-                <div class="dashboard-recent-activities">
-                    <h2 class="section-title"> Recent Activities </h2>
-                    <ul class="activity-list">
-                        <li>
-                            <a href="#">
-                                <span class="activity-date"> June 15, 2026 </span>
-                                <p> Acxel Benoyo uploaded a newfile </p>
-                            </a>
-                        </li>
-                    </ul>
-                    <button class="view-all"> View All </button>
+                <div class="form-group">
+                    <label for="accountEmail"> Email </label>
+                    <input type="email" id="accountEmail" placeholder="example@email.com" required>
                 </div>
+
+                <div class="form-group">
+                    <label for="accountPassword"> Password</label>
+                    <input type="password" id="accountPassword" minlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="accountRole">Role</label>
+                    <select id="accountRole" required>
+                        <option value="staff">Staff</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+
+                <p id="accountMessage" class="account-message"></p>
+
+                <button type="submit" class="create-account-btn" id="createAccountButton">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Create Account
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="deleteModal" class="account-modal">
+        <div class="delete-modal-box">
+            <button id="closeDeleteModal" class="close-account-modal">&times;</button>
+            <div class="delete-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h2>Delete Account?</h2>
+            <p>Are you sure you want to delete<strong id="deleteAccountName"></strong>?</p>
+            <p class="delete-warning">This action cannot be undone.</p>
+
+            <div class="delete-buttons">
+                <button id="cancelDeleteButton" class="cancel-delete-btn">Cancel</button>
+                <button id="confirmDeleteButton" class="confirm-delete-btn">Delete Account</button>
             </div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="socials">

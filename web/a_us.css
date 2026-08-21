@@ -21,13 +21,17 @@
     --grey-color:#bababa;
 }
 body {
-  height: 100vh;
-  background-color: var(--background-color);
+    min-height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
 }
 html, body{
     scrollbar-width: none;
-
     -ms-overflow-style: none;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar{
@@ -101,7 +105,7 @@ footer {
     width: 100%;
     min-height: 120px;
     padding: 30px 80px;
-    margin: 0;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;

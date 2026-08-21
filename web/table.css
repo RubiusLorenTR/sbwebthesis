@@ -19,6 +19,23 @@
 .admin-only {
     display: none;
 }
+html,body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+.main-content {
+    width: 100%;
+    min-height: 335px;
+    flex: 1;
+    background-color: #ffffff;
+}
 /* --------------------------------Navigation Bar-------------------------------- */
 .navbar {
     display: flex;
@@ -159,12 +176,10 @@
     white-space: nowrap;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-
 .login-btn:hover {
     background-color: var(--secondary-color);
     transform: scale(1.05);
 }
-
 .login-modal {
     display: none;
     position: fixed;
@@ -174,7 +189,6 @@
     align-items: center;
     z-index: 2000;
 }
-
 .login-box {
     background-color: var(--background-color);
     width: 350px;
@@ -184,7 +198,6 @@
     position: relative;
     font-family: Arial, sans-serif;
 }
-
 .close-btn {
     position: absolute;
     top: 10px;
@@ -192,23 +205,19 @@
     font-size: 26px;
     cursor: pointer;
 }
-
 .login-logo {
     height: 60px;
     width: auto;
     margin-bottom: 10px;
 }
-
 .login-box h2 {
     margin-bottom: 5px;
     color: var(--primary-color);
 }
-
 .login-box p {
     color: var(--text-color);
     margin-bottom: 20px;
 }
-
 .microsoft-btn {
     width: 100%;
     padding: 12px;
@@ -218,23 +227,92 @@
     cursor: pointer;
     font-size: 15px;
 }
-
 .microsoft-btn:hover {
     background-color: var(--background-color);
 }
-/* --------------------------------Footer-------------------------------- */
-footer {
-    width: 100%;
-    min-height: 120px;
-    padding: 30px 80px;
+/* -------------------------------- arrow back -------------------------------- */
+.arrow-back-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    background-color: white;
+}
+.arrow-back-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.arrow-back-btn .left {
+    font-size: 24px;
+}
+.arrow-back-btn h1 {
     margin: 0;
+    font-size: 24px;
+    color: var(--text-color);
+}
+/* --------------------------------Footer-------------------------------- */
+.site-footer {
+    width: 100%;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+.deped {
+    width: 100%;
+    min-height: 184px;
+
+    padding: 20px 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 75px;
+
+    background-color: var(--primary-color);
+    color: var(--text-color1);
+}
+.deped > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 140px;
+}
+.deped img {
+    display: block;
+
+    width: 115px;
+    height: auto;
+
+    object-fit: contain;
+}
+.deped-content {
+    flex: 1;
+    max-width: none;
+}
+.deped-content h3 {
+    margin-bottom: 15px;
+}
+.deped-content p {
+    margin: 0;
+    line-height: 1.5;
+    max-width: 1350px;
+}
+.footer-bottom {
+    width: 100%;
+    min-height: 124px;
+    padding: 22px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
     background-color: #1e1e38;
-    position: relative; 
 }
 .socials {
     display: flex;
@@ -246,6 +324,7 @@ footer {
 .socials a {
     color: var(--text-color1);
     text-decoration: none;
+
     transition: 0.3s ease;
 }
 .socials a:hover {
@@ -253,43 +332,16 @@ footer {
     color: var(--primary-color);
 }
 .footerbottom {
-    padding: 20px;
+    padding: 0;
     text-align: center;
     color: var(--text-color1);
 }
-/* --------------------------------DEPED--------------------------------  */
-.deped{
-    background-color: var(--primary-color);
-    padding: 0 15px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    gap: 5rem;
-    color: var(--text-color1);
-}
-.deped-content{
-    flex: 1;
-}
-.deped h3{
-    margin-bottom: 15px;
-}
-.deped p{
-    margin-right: 50px;
-}
-.deped img{
-    margin-top: 10px;
-    width: 100%;
-    margin-left: 20px;
-    max-width: 200px;
-    object-fit: cover;
-    vertical-align: right;
-}
 /* --------------------------------Body--------------------------------  */
-.table-page{
-    max-width:1200px;
-    margin:40px auto;
-    padding:20px;
+.table-page {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 50px;
+    padding: 0;
 }
 .page-header{
     display:flex;
@@ -297,10 +349,11 @@ footer {
     align-items:center;
     margin-bottom:30px;
 }
-.page-header h1{
-    font-size:32px;
-    color:var(--primary-color);
-    margin-bottom:6px;
+.page-header h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 6px;
 }
 .page-header p{
     color:#666;
@@ -437,22 +490,34 @@ footer {
     font-size:28px;
     cursor:pointer;
 }
-@media(max-width:900px){
-    .page-header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:20px;
+@media(max-width:900px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
-    .toolbar{
-        justify-content:flex-start;
+    .toolbar {
+        justify-content: flex-start;
     }
-    .toolbar input{
-        width:100%;
+    .toolbar input {
+        width: 100%;
     }
-    .table-container{
-        overflow-x:auto;
+    .table-container {
+        overflow-x: auto;
     }
-    .files-table{
-        min-width:800px;
+    .files-table {
+        min-width: 800px;
+    }
+    .deped {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .deped > a {
+        width: auto;
+    }
+    .deped-content p {
+        margin: 0;
     }
 }

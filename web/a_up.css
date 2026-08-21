@@ -21,14 +21,13 @@
     --grey-color:#bababa;
 }
 body {
-     min-height: 100vh; 
-     background-color: var(--background-color);
-     display: flex;
-     flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
 }
 html, body{
     scrollbar-width: none;
-
     -ms-overflow-style: none;
 }
 html::-webkit-scrollbar,
@@ -251,20 +250,20 @@ body {
     }
 }
 
+
 /* --------------------------------Footer-------------------------------- */
 footer {
     width: 100%;
     min-height: 120px;
     padding: 30px 80px;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
     background-color: #1e1e38;
-    position: relative; 
-    margin-top: auto;
-    bottom: 0;
+    position: relative;
 }
 .socials {
     display: flex;

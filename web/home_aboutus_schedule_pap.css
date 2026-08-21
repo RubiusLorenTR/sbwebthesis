@@ -521,6 +521,7 @@ main li{
     max-width:1200px;
     margin:40px auto;
     padding:20px;
+    padding-top: 50px; 
 }
 .schedule-page{
     display:flex;
