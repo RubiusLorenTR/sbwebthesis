@@ -434,14 +434,28 @@ body {
     background:transparent;
     padding:8px 15px;
     border:none;
+    cursor:pointer;
     border-radius:25px;
+    transition:.2s;
 }
 .download-btn:hover{
     background:var(--primary-color);
     color:white;
+    transform:translateY(-1px);
 }
 .delete-btn{
-    background:#e53935;
+    background:transparent;
+    padding:8px 15px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    color:red;
+    transition:.2s;
+}
+.delete-btn:hover{
+    background:red;
+    color: white;
+    transform:translateY(-1px);
 }
 .action-btn:hover{
     transform:translateY(-2px);
