@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Profile</title>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/web/a_up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/web/a_scripts.js"></script>
+</head>
+
+<!------ NAVIGATION FOR USERPROFILE ------>
+<body>
+    <nav>
+        <div class="nav-user-profile">
+            <a href="/web/a_dashboard.html">
+                <i class="fa-solid fa-angle-left left"></i>
+            </a>
+            <h1>Profile</h1>
+        </div>
+    </nav>
+
+<!-- USER VIEW-->
+    <div class="user-profile">
+        <img src="/images/user1.png" id="userImg" alt="user-profile">
+        <h3 id="viewName">Acxel G. Benoyo</h3>
+
+        <div id="viewMode">
+            <p>Name:<span id="viewName">Acxel G.Benoyor</span></p>
+            <p>Email: <span id="viewEmail">acxelbenoyo@gmail.com</span></p>
+            <p>Position: <span id="viewPosition">Student</span></p>
+            <p>Hobby: <span id="viewHobby">Playing, Cooking, Sleeping</span></p>
+            <a href="/web/a_up_edit.html"><button onclick="navigateTo('view' , 'editMode' )" class="edit-info">Edit</button></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.facebook.com/DepEdACES109582" class="fa-brands fa-facebook-f"></a>
+            <a href="#" class="fa-solid fa-at"></a>
+            <a href="#" class="fa-solid fa-phone"></a>
+        </div>
+        <div class="footerbottom">
+            <p>&copy; <span id="current-year"></span> ACES. All rights reserved.</p>
+        </div>
+    </footer>  
+</body>
+</html>
